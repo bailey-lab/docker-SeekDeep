@@ -41,20 +41,6 @@ RUN DEBIAN_FRONTEND=noninteractive apt-get install -y zlib1g-dev libpango1.0-dev
 RUN apt-get update && \
   apt-get install -y apache2 apache2-utils
   
-
-# download SeekDeep from repo
-#RUN cd /root && git clone https://github.com/bailey-lab/SeekDeep.git
-
-# download and install dependencies
-#RUN cd /root/SeekDeep && ./configure.py -CC clang-3.5 -CXX clang++-3.5 && ./setup.py -compfile compfile.mk
-
-#remove tarballs and build directories
-#RUN /bin/rm -fr /root/SeekDeep/external/tarballs /root/SeekDeep/external/build  
-
-#make SeekDeep
-#RUN cd /root/SeekDeep && make -j $(nproc)
-
-
 # add all the files necessary files from the files directory for misc operations
 ADD /files/ /
 
