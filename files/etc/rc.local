@@ -1,0 +1,11 @@
+#!/bin/sh -e
+
+# start services...
+# i.e. su someuser -c "/usr/bin/nohup my_command >/dev/null 2>&1 &"
+# i.e. service someservice start
+
+# start services (wait for logging)
+nohup sh -c 'sleep 5; service apache2 restart' >/dev/null 2>&1 &
+
+# exit with a straight face :-|
+exit 0
