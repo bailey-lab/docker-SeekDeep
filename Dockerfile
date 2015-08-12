@@ -35,7 +35,7 @@ RUN echo "deb http://llvm.org/apt/"$(lsb_release -sc)"/ llvm-toolchain-"$(lsb_re
 RUN ln -s /usr/bin/clang-3.5 /usr/bin/clang && ln -s /usr/bin/clang++-3.5 /usr/bin/clang++
 
 # install some generic stuff needed by other libraries 
-RUN DEBIAN_FRONTEND=noninteractive apt-get install -y zlib1g-dev libpango1.0-dev libcurl4-openssl-dev doxygen graphviz libbz2-dev libjpeg-dev libatlas-base-dev gfortran fort77 libreadline6-dev emacs23-nox
+RUN DEBIAN_FRONTEND=noninteractive apt-get install -y zlib1g-dev libcairo2-dev libpango1.0-dev libcurl4-openssl-dev doxygen graphviz libbz2-dev libjpeg-dev libatlas-base-dev gfortran fort77 libreadline6-dev emacs23-nox
 
 #install apache2
 RUN apt-get update && \
