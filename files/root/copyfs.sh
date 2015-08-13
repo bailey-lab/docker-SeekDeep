@@ -3,7 +3,7 @@
 # this is meant to be run ONCE right after initial setup
 # to copy out some stuff to external filesystems
 
-# docker run -ti --rm -v /data/docker/SeekDeep/:/mnt myimageid /root/copyfs.sh
+# docker run -ti --rm -v /data/docker/seekdeep/:/mnt myimageid /root/copyfs.sh
 
 # stop services 
 

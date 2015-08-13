@@ -29,6 +29,3 @@ docker run \
 	-P -p 127.0.0.1:8000:80 \
 	-d --restart=always \
 	--hostname="${NAME}" --name="${NAME}" "${IMAGE}"
-	
-	
-	 
