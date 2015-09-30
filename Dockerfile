@@ -39,7 +39,8 @@ RUN DEBIAN_FRONTEND=noninteractive apt-get install -y zlib1g-dev libcairo2-dev l
 
 #install apache2
 RUN apt-get update && \
-  apt-get install -y apache2 apache2-utils
+  apt-get install -y apache2 apache2-utils && \
+  a2enmod proxy && a2enmod proxy_http
   
 # add all the files necessary files from the files directory for misc operations
 ADD /files/ /
